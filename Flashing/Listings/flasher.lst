@@ -1,0 +1,62 @@
+C51 COMPILER V9.56.0.0   FLASHER                                                           06/22/2017 15:05:53 PAGE 1   
+
+
+C51 COMPILER V9.56.0.0, COMPILATION OF MODULE FLASHER
+OBJECT MODULE PLACED IN .\Objects\flasher.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE flasher.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\f
+                    -lasher.lst) TABS(2) OBJECT(.\Objects\flasher.obj)
+
+line level    source
+
+   1          #include <at89c51xd2.h>
+   2          
+   3          sbit LED = P2^0;
+   4          
+   5          void Delay_1_sec();
+   6          
+   7          
+   8          void main()
+   9          {
+  10   1          //P1 = 0xFF;
+  11   1          P2_0 == 0;
+*** WARNING C275 IN LINE 11 OF flasher.c: expression with possibly no effect
+  12   1        
+  13   1          /*while( P1_0 == 0)
+  14   1          {
+  15   1                 LED = 0;          
+  16   1                 Delay_1_sec();                 
+  17   1                 LED = 1;           
+  18   1                 Delay_1_sec(); 
+  19   1          }*/
+  20   1      }
+  21          
+  22          void Delay_1_sec()
+  23          {
+  24   1        unsigned char i, j, k;
+  25   1          for( i = 14; i > 0; i--)
+  26   1            for( j = 255; j > 0; j--)
+  27   1              for( k = 255; k > 0; k--)
+  28   1                  ;
+  29   1      }
+  30          
+  31          /*
+  32          void Delay_1_sec()
+  33          {
+  34            unsigned long i;
+  35            for( i = 40000; i > 0; i--)   ;
+  36          }
+  37          */
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     14    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

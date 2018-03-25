@@ -1,0 +1,4 @@
+".\Objects\flasher.obj" 
+TO ".\Objects\Lab2" 
+PRINT(".\Listings\Lab2.m51") RAMSIZE(256) 
+XDATA( 0X0000-0X06FF )

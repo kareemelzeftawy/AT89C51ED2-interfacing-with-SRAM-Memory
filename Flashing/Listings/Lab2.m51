@@ -1,0 +1,90 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/22/2017  15:05:53  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\flasher.obj TO .\Objects\Lab2 PRINT (.\Listings\Lab2.m51) RAMSIZE (256) XDATA (0X0
+>> 000-0X06FF)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\flasher.obj (FLASHER)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  .\Objects\Lab2 (FLASHER)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     000DH     UNIT         ?PR?DELAY_1_SEC?FLASHER
+            CODE    080DH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0819H     0001H     UNIT         ?PR?MAIN?FLASHER
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Lab2 (FLASHER)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?FLASHER
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Lab2 (FLASHER)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        FLASHER
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  B:00A0H.0       PUBLIC        P2_0
+  C:0800H         PUBLIC        Delay_1_sec
+  C:0819H         PUBLIC        main
+  -------         PROC          MAIN
+  C:0819H         LINE#         8
+  C:0819H         LINE#         9
+  C:0819H         LINE#         11
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/22/2017  15:05:53  PAGE 2
+
+
+  C:0819H         LINE#         20
+  -------         ENDPROC       MAIN
+  -------         PROC          DELAY_1_SEC
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  D:0005H         SYMBOL        k
+  -------         ENDDO         
+  C:0800H         LINE#         22
+  C:0800H         LINE#         23
+  C:0800H         LINE#         25
+  C:0802H         LINE#         26
+  C:0804H         LINE#         27
+  C:080CH         LINE#         29
+  -------         ENDPROC       DELAY_1_SEC
+  -------         ENDMOD        FLASHER
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?DELAY_1_SEC?FLASHER
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 000EH BYTE ( 0%) *
+******************************************************************************
+
+Program Size: data=9.0 xdata=0 code=29
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)
