@@ -1,0 +1,4 @@
+".\Objects\test_all_mem.obj" 
+TO ".\Objects\ext_mem" 
+PRINT(".\Listings\ext_mem.m51") RAMSIZE(256) 
+XDATA( 0X0000-0X86FF )

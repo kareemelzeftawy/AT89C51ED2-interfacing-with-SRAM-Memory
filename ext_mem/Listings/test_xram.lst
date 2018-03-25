@@ -1,0 +1,42 @@
+C51 COMPILER V9.54   TEST_XRAM                                                             04/19/2017 08:25:59 PAGE 1   
+
+
+C51 COMPILER V9.54, COMPILATION OF MODULE TEST_XRAM
+OBJECT MODULE PLACED IN .\Objects\test_xram.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE test_xram.c OPTIMIZE(0,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings
+                    -\test_xram.lst) TABS(2) OBJECT(.\Objects\test_xram.obj)
+
+line level    source
+
+   1          #include <at89c51xd2.h>
+   2          
+   3          
+   4          char xdata x _at_ 0x0000;
+   5          char xdata y _at_ 0x0001;
+   6          char xdata z _at_ 0x0002;
+   7          
+   8          void main()
+   9          {
+  10   1           
+  11   1           AUXR = 0x00;
+  12   1           P1 = 0xFF;
+  13   1           x = 0x02;
+  14   1           y = 0x04;
+  15   1           z = x + y;
+  16   1           P1 = z;
+  17   1      
+  18   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     44    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
